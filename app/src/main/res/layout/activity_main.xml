@@ -1,0 +1,287 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity">
+
+    <LinearLayout
+        android:id="@+id/linearLayout2"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_marginStart="1dp"
+        android:layout_marginTop="1dp"
+        android:layout_marginEnd="1dp"
+        android:layout_marginBottom="1dp"
+        android:orientation="vertical"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <EditText
+            android:id="@+id/calculatingZone"
+            android:layout_width="match_parent"
+            android:layout_height="192dp"
+            android:ems="10"
+            android:fontFamily="@font/poppins_semibold"
+            android:gravity="bottom"
+            android:hint="(4 + 8) * 2"
+            android:inputType="text"
+            android:padding="20dp"
+            android:text="Name"
+            android:textAlignment="viewEnd"
+            android:textSize="34sp" />
+
+        <TableLayout
+            android:layout_width="match_parent"
+            android:layout_height="524dp"
+            android:padding="5dp"
+            android:stretchColumns="*">
+
+            <TableRow
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_weight="1">
+
+                <Button
+                    android:id="@+id/deletAllBtn"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:background="#8BC34A"
+                    android:fontFamily="@font/roboto_mono_bold"
+                    android:text="@string/delete_all"
+                    android:textSize="22sp"
+                    app:backgroundTint="@null" />
+
+                <Button
+                    android:id="@+id/openParenthesisBtn"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:background="#2196F3"
+                    android:fontFamily="@font/roboto_mono_bold"
+                    android:text="@string/open_parenthesis"
+                    app:backgroundTint="@null"
+                    android:textSize="24sp" />
+
+                <Button
+                    android:id="@+id/closeParenthesisBtn"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:background="#2196F3"
+                    android:fontFamily="@font/roboto_mono_bold"
+                    android:text="@string/close_parenthesis"
+                    android:textSize="24sp"
+                    app:backgroundTint="@null" />
+
+                <Button
+                    android:id="@+id/divisionBtn"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:background="#03A9F4"
+                    android:fontFamily="@font/roboto_mono_bold"
+                    android:text="@string/division"
+                    app:backgroundTint="@null"
+                    android:textSize="24sp" />
+            </TableRow>
+
+            <TableRow
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_weight="1">
+
+                <Button
+                    android:id="@+id/num7Btn"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:fontFamily="@font/roboto_mono_bold"
+                    android:text="@string/number_7"
+                    android:textSize="24sp"
+                    android:background="#00BCD4"
+                    app:backgroundTint="@null"
+                    />
+
+                <Button
+                    android:id="@+id/num8Btn"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:fontFamily="@font/roboto_mono_bold"
+                    android:text="@string/number_8"
+                    android:textSize="24sp"
+                    android:background="#00BCD4"
+                    app:backgroundTint="@null"
+                    />
+
+                <Button
+                    android:id="@+id/num9Btn"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:fontFamily="@font/roboto_mono_bold"
+                    android:text="@string/number_9"
+                    android:textSize="24sp"
+                    android:background="#00BCD4"
+                    app:backgroundTint="@null"
+                    />
+
+                <Button
+                    android:id="@+id/multiplicationBtn"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:background="#03A9F4"
+                    android:fontFamily="@font/roboto_mono_bold"
+                    android:text="@string/multiplication"
+                    app:backgroundTint="@null"
+                    android:textSize="24sp" />
+            </TableRow>
+
+            <TableRow
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_weight="1">
+
+                <Button
+                    android:id="@+id/num4Btn"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:fontFamily="@font/roboto_mono_bold"
+                    android:text="@string/number_4"
+                    android:textSize="24sp"
+                    android:background="#00BCD4"
+                    app:backgroundTint="@null"
+                    />
+
+                <Button
+                    android:id="@+id/num5Btn"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:fontFamily="@font/roboto_mono_bold"
+                    android:text="@string/number_5"
+                    android:textSize="24sp"
+                    android:background="#00BCD4"
+                    app:backgroundTint="@null"
+                    />
+
+                <Button
+                    android:id="@+id/num6Btn"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:fontFamily="@font/roboto_mono_bold"
+                    android:text="@string/number_6"
+                    android:textSize="24sp"
+                    android:background="#00BCD4"
+                    app:backgroundTint="@null"
+                    />
+
+                <Button
+                    android:id="@+id/subtractionBtn"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:background="#03A9F4"
+                    android:fontFamily="@font/roboto_mono_bold"
+                    android:text="@string/subtraction"
+                    app:backgroundTint="@null"
+                    android:textSize="24sp" />
+            </TableRow>
+
+            <TableRow
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_weight="1">
+
+                <Button
+                    android:id="@+id/num1Btn"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:fontFamily="@font/roboto_mono_bold"
+                    android:text="@string/number_1"
+                    android:textSize="24sp"
+                    android:background="#00BCD4"
+                    app:backgroundTint="@null"
+                    />
+
+                <Button
+                    android:id="@+id/num2Btn"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:fontFamily="@font/roboto_mono_bold"
+                    android:text="@string/number_2"
+                    android:textSize="24sp"
+                    android:background="#00BCD4"
+                    app:backgroundTint="@null"
+                    />
+
+                <Button
+                    android:id="@+id/num3Btn"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:fontFamily="@font/roboto_mono_bold"
+                    android:text="@string/number_3"
+                    android:textSize="24sp"
+                    android:background="#00BCD4"
+                    app:backgroundTint="@null"
+                    />
+
+                <Button
+                    android:id="@+id/additionBtn"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:background="#03A9F4"
+                    android:fontFamily="@font/roboto_mono_bold"
+                    android:text="@string/addition"
+                    app:backgroundTint="@null"
+                    android:textSize="24sp" />
+            </TableRow>
+
+            <TableRow
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_weight="1">
+
+                <Button
+                    android:id="@+id/num0Btn"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:fontFamily="@font/roboto_mono_bold"
+                    android:text="@string/number_0"
+                    android:textSize="24sp"
+                    android:background="#00BCD4"
+                    app:backgroundTint="@null"
+                    />
+
+                <Button
+                    android:id="@+id/commaBtn"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:fontFamily="@font/roboto_mono_bold"
+                    android:text="@string/comma"
+                    android:textSize="24sp"
+                    android:background="#00BCD4"
+                    app:backgroundTint="@null"
+                    />
+
+                <Button
+                    android:id="@+id/deleteBtn"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:background="#F44336"
+                    android:fontFamily="@font/roboto_mono_bold"
+                    android:text="@string/delete"
+                    android:textSize="22sp"
+                    app:backgroundTint="@null" />
+
+                <Button
+                    android:id="@+id/equalBtn"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:background="#9C27B0"
+                    android:fontFamily="@font/roboto_mono_bold"
+                    android:text="@string/equal"
+                    android:textSize="24sp" />
+            </TableRow>
+
+        </TableLayout>
+
+    </LinearLayout>
+</androidx.constraintlayout.widget.ConstraintLayout>
