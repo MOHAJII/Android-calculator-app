@@ -21,19 +21,17 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent">
 
-        <EditText
-            android:id="@+id/calculatingZone"
+        <TextView
+            android:id="@+id/calculateZone"
             android:layout_width="match_parent"
-            android:layout_height="192dp"
-            android:ems="10"
+            android:layout_height="162dp"
             android:fontFamily="@font/poppins_semibold"
             android:gravity="bottom"
-            android:hint="(4 + 8) * 2"
-            android:inputType="text"
-            android:padding="20dp"
-            android:text="Name"
+            android:hint="(1+2)/5"
+            android:padding="10dp"
             android:textAlignment="viewEnd"
-            android:textSize="34sp" />
+            android:textSize="48sp"
+            tools:ignore="RtlCompat" />
 
         <TableLayout
             android:layout_width="match_parent"
@@ -54,7 +52,8 @@
                     android:fontFamily="@font/roboto_mono_bold"
                     android:text="@string/delete_all"
                     android:textSize="22sp"
-                    app:backgroundTint="@null" />
+                    app:backgroundTint="@null"
+                    app:cornerRadius="10dp" />
 
                 <Button
                     android:id="@+id/openParenthesisBtn"

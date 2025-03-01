@@ -1,0 +1,384 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".PaysageCalculatorMode">
+
+    <LinearLayout
+        android:id="@+id/linearLayout"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_marginStart="1dp"
+        android:layout_marginTop="1dp"
+        android:layout_marginEnd="1dp"
+        android:layout_marginBottom="1dp"
+        android:orientation="vertical"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <TextView
+            android:id="@+id/textView"
+            android:layout_width="match_parent"
+            android:layout_height="156dp"
+            android:fontFamily="@font/poppins_semibold"
+            android:gravity="bottom"
+            android:hint="(1+2)*4"
+            android:padding="5dp"
+            android:textAlignment="viewEnd"
+            android:textSize="48sp" />
+
+        <TableLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_margin="5dp"
+            android:stretchColumns="*">
+
+            <TableRow
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <Button
+                    android:id="@+id/button"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:background="#3F51B5"
+                    android:fontFamily="@font/poppins_semibold"
+                    android:textSize="16sp"
+                    android:text="@string/radian"
+                    app:backgroundTint="@null" />
+
+                <Button
+                    android:id="@+id/button2"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:background="#3F51B5"
+                    android:fontFamily="@font/poppins_semibold"
+                    android:textSize="16sp"
+                    android:text="@string/racine"
+                    app:backgroundTint="@null" />
+
+                <Button
+                    android:id="@+id/button3"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:background="#3F51B5"
+                    android:fontFamily="@font/poppins_semibold"
+                    android:textSize="16sp"
+                    android:text="@string/pi"
+                    app:backgroundTint="@null" />
+
+                <Button
+                    android:id="@+id/button4"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:background="#00BCD4"
+                    android:fontFamily="@font/poppins_semibold"
+                    android:textSize="16sp"
+                    android:text="@string/number_7"
+                    app:backgroundTint="@null" />
+
+                <Button
+                    android:id="@+id/button5"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:background="#00BCD4"
+                    android:fontFamily="@font/poppins_semibold"
+                    android:text="@string/number_8"
+                    android:textSize="16sp"
+                    app:backgroundTint="@null" />
+
+                <Button
+                    android:id="@+id/button6"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:background="#00BCD4"
+                    android:fontFamily="@font/poppins_semibold"
+                    android:text="@string/number_9"
+                    android:textSize="16sp"
+                    app:backgroundTint="@null" />
+
+                <Button
+                    android:id="@+id/button7"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:background="#03A9F4"
+                    android:fontFamily="@font/poppins_semibold"
+                    android:text="@string/division"
+                    android:textSize="16sp"
+                    app:backgroundTint="@null" />
+
+                <Button
+                    android:id="@+id/button8"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:background="#8BC34A"
+                    android:fontFamily="@font/poppins_semibold"
+                    android:text="@string/delete_all"
+                    android:textSize="16sp"
+                    app:backgroundTint="@null" />
+            </TableRow>
+
+            <TableRow
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+
+                <Button
+                    android:id="@+id/button"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:background="#3F51B5"
+                    android:fontFamily="@font/poppins_semibold"
+                    android:textSize="16sp"
+                    android:text="@string/percentage"
+                    app:backgroundTint="@null" />
+
+                <Button
+                    android:id="@+id/button2"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:background="#3F51B5"
+                    android:fontFamily="@font/poppins_semibold"
+                    android:textSize="16sp"
+                    android:text="@string/power"
+                    app:backgroundTint="@null" />
+
+                <Button
+                    android:id="@+id/button3"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:background="#3F51B5"
+                    android:fontFamily="@font/poppins_semibold"
+                    android:textSize="16sp"
+                    android:text="@string/exclamation"
+                    app:backgroundTint="@null" />
+
+                <Button
+                    android:id="@+id/button4"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:background="#00BCD4"
+                    android:fontFamily="@font/poppins_semibold"
+                    android:textSize="16sp"
+                    android:text="@string/number_4"
+                    app:backgroundTint="@null" />
+
+                <Button
+                    android:id="@+id/button5"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:background="#00BCD4"
+                    android:fontFamily="@font/poppins_semibold"
+                    android:textSize="16sp"
+                    android:text="@string/number_5"
+                    app:backgroundTint="@null" />
+
+                <Button
+                    android:id="@+id/button6"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:background="#00BCD4"
+                    android:fontFamily="@font/poppins_semibold"
+                    android:textSize="16sp"
+                    android:text="@string/number_6"
+                    app:backgroundTint="@null" />
+
+                <Button
+                    android:id="@+id/button7"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:background="#03A9F4"
+                    android:fontFamily="@font/poppins_semibold"
+                    android:textSize="16sp"
+                    android:text="@string/multiplication"
+                    app:backgroundTint="@null" />
+
+                <Button
+                    android:id="@+id/button8"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:background="#03A9F4"
+                    android:fontFamily="@font/poppins_semibold"
+                    android:textSize="16sp"
+                    android:text="@string/open_parenthesis"
+                    app:backgroundTint="@null" />
+            </TableRow>
+
+            <TableRow
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+
+                <Button
+                    android:id="@+id/button"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:background="#3F51B5"
+                    android:fontFamily="@font/poppins_semibold"
+                    android:textSize="16sp"
+                    android:text="@string/sinus"
+                    app:backgroundTint="@null" />
+
+                <Button
+                    android:id="@+id/button2"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:background="#3F51B5"
+                    android:fontFamily="@font/poppins_semibold"
+                    android:textSize="16sp"
+                    android:text="@string/cosinus"
+                    app:backgroundTint="@null" />
+
+                <Button
+                    android:id="@+id/button3"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:background="#3F51B5"
+                    android:fontFamily="@font/poppins_semibold"
+                    android:textSize="16sp"
+                    android:text="@string/tangent"
+                    app:backgroundTint="@null" />
+
+                <Button
+                    android:id="@+id/button4"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:background="#00BCD4"
+                    android:fontFamily="@font/poppins_semibold"
+                    android:textSize="16sp"
+                    android:text="@string/number_1"
+                    app:backgroundTint="@null" />
+
+                <Button
+                    android:id="@+id/button5"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:background="#00BCD4"
+                    android:fontFamily="@font/poppins_semibold"
+                    android:textSize="16sp"
+                    android:text="@string/number_2"
+                    app:backgroundTint="@null" />
+
+                <Button
+                    android:id="@+id/button6"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:background="#00BCD4"
+                    android:fontFamily="@font/poppins_semibold"
+                    android:textSize="16sp"
+                    android:text="@string/number_3"
+                    app:backgroundTint="@null" />
+
+                <Button
+                    android:id="@+id/button7"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:background="#03A9F4"
+                    android:fontFamily="@font/poppins_semibold"
+                    android:textSize="16sp"
+                    android:text="@string/subtraction"
+                    app:backgroundTint="@null" />
+
+                <Button
+                    android:id="@+id/button8"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:background="#03A9F4"
+                    android:fontFamily="@font/poppins_semibold"
+                    android:textSize="16sp"
+                    android:text="@string/close_parenthesis"
+                    app:backgroundTint="@null" />
+            </TableRow>
+
+            <TableRow
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_weight="1">
+
+                <Button
+                    android:id="@+id/button"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:background="#3F51B5"
+                    android:fontFamily="@font/poppins_semibold"
+                    android:textSize="16sp"
+                    android:text="@string/exponential"
+                    app:backgroundTint="@null" />
+
+                <Button
+                    android:id="@+id/button2"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:background="#3F51B5"
+                    android:fontFamily="@font/poppins_semibold"
+                    android:textSize="16sp"
+                    android:text="@string/logarithmic_nip"
+                    app:backgroundTint="@null" />
+
+                <Button
+                    android:id="@+id/button3"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:background="#3F51B5"
+                    android:fontFamily="@font/poppins_semibold"
+                    android:textSize="16sp"
+                    android:text="@string/logarithmic"
+                    app:backgroundTint="@null" />
+
+                <Button
+                    android:id="@+id/button4"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:background="#00BCD4"
+                    android:fontFamily="@font/poppins_semibold"
+                    android:textSize="16sp"
+                    android:text="@string/number_0"
+                    app:backgroundTint="@null" />
+
+                <Button
+                    android:id="@+id/button5"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:background="#00BCD4"
+                    android:fontFamily="@font/poppins_semibold"
+                    android:textSize="16sp"
+                    android:text="@string/comma"
+                    app:backgroundTint="@null" />
+
+                <Button
+                    android:id="@+id/button6"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:background="#F44336"
+                    android:fontFamily="@font/poppins_semibold"
+                    android:textSize="16sp"
+                    android:text="@string/delete"
+                    app:backgroundTint="@null" />
+
+                <Button
+                    android:id="@+id/button7"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:background="#03A9F4"
+                    android:fontFamily="@font/poppins_semibold"
+                    android:textSize="16sp"
+                    android:text="@string/addition"
+                    app:backgroundTint="@null" />
+
+                <Button
+                    android:id="@+id/button8"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:background="#9C27B0"
+                    android:fontFamily="@font/poppins_semibold"
+                    android:textSize="16sp"
+                    android:text="@string/equal"
+                    app:backgroundTint="@null" />
+            </TableRow>
+
+        </TableLayout>
+    </LinearLayout>
+</androidx.constraintlayout.widget.ConstraintLayout>

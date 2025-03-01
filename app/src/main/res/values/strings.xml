@@ -20,4 +20,16 @@
     <string name="comma">,</string>
     <string name="number_0">0</string>
     <string name="delete">DEL</string>
+    <string name="radian">RAD</string>
+    <string name="racine">√</string>
+    <string name="pi">π</string>
+    <string name="percentage">%</string>
+    <string name="power">^</string>
+    <string name="exclamation">!</string>
+    <string name="sinus">SIN</string>
+    <string name="cosinus">COS</string>
+    <string name="tangent">TAN</string>
+    <string name="exponential">e</string>
+    <string name="logarithmic">LOG</string>
+    <string name="logarithmic_nip">LN</string>
 </resources>

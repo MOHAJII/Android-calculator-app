@@ -2,12 +2,16 @@ package net.haji.calculator
 
 import android.annotation.SuppressLint
 import android.os.Bundle
+import android.os.Handler
+import android.os.Looper
 import android.widget.Button
 import android.widget.EditText
+import android.widget.TextView
 import androidx.activity.enableEdgeToEdge
 import androidx.appcompat.app.AppCompatActivity
 import androidx.core.view.ViewCompat
 import androidx.core.view.WindowInsetsCompat
+import net.objecthunter.exp4j.ExpressionBuilder
 
 class MainActivity : AppCompatActivity() {
     @SuppressLint("MissingInflatedId")
@@ -37,11 +41,101 @@ class MainActivity : AppCompatActivity() {
         val deleteBtn = findViewById<Button>(R.id.deleteBtn);
         val equalBtn = findViewById<Button>(R.id.equalBtn);
 
-        val calculatingZone = findViewById<EditText>(R.id.calculatingZone);
+        val calculatingZone = findViewById<TextView>(R.id.calculateZone);
 
-        deleteBtn.setOnClickListener(v -> {
+        deleteAllBtn.setOnClickListener {
+            calculatingZone.setText("")
+        }
 
-        })
+        openParenthesisBtn.setOnClickListener {
+            calculatingZone.append("(")
+        }
+
+        closeParenthesisBtn.setOnClickListener {
+            calculatingZone.append(")")
+        }
+
+        divisionBtn.setOnClickListener {
+            calculatingZone.append("/")
+        }
+
+        num7Btn.setOnClickListener {
+            calculatingZone.append("7")
+        }
+
+        num8Btn.setOnClickListener {
+            calculatingZone.append("8")
+        }
+
+        num9Btn.setOnClickListener {
+            calculatingZone.append("9")
+        }
+
+        multiplicationBtn.setOnClickListener {
+            calculatingZone.append("*")
+        }
+
+        num4Btn.setOnClickListener {
+            calculatingZone.append("4")
+        }
+
+        num5Btn.setOnClickListener {
+            calculatingZone.append("5")
+        }
+
+        num6Btn.setOnClickListener {
+            calculatingZone.append("6")
+        }
+
+        subtractionBtn.setOnClickListener {
+            calculatingZone.append("-")
+        }
+
+        num1Btn.setOnClickListener {
+            calculatingZone.append("1")
+        }
+
+        num2Btn.setOnClickListener {
+            calculatingZone.append("2")
+        }
+
+        num3Btn.setOnClickListener {
+            calculatingZone.append("3")
+        }
+
+        additionBtn.setOnClickListener {
+            calculatingZone.append("+")
+        }
+
+        num0Btn.setOnClickListener {
+            calculatingZone.append("0")
+        }
+
+        commaBtn.setOnClickListener {
+            calculatingZone.append(".")
+        }
+
+        deleteBtn.setOnClickListener {
+            val currentText = calculatingZone.text.toString()
+            if (currentText.isNotEmpty()) {
+                // Remove the last character
+                calculatingZone.setText(currentText.dropLast(1))
+            }
+        }
+
+        equalBtn.setOnClickListener {
+            val expression = calculatingZone.text
+            try {
+                var result = ExpressionBuilder(expression.toString()).build().evaluate()
+                calculatingZone.setText(result.toString())
+            } catch (e: Exception) {
+                Handler(Looper.getMainLooper()).postDelayed({
+                    calculatingZone.setText("")
+                }, 700)
+                calculatingZone.setText("NaN")
+            }
+        }
+
 
         ViewCompat.setOnApplyWindowInsetsListener(findViewById(R.id.main)) { v, insets ->
             val systemBars = insets.getInsets(WindowInsetsCompat.Type.systemBars())
