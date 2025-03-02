@@ -1,11 +1,12 @@
 package net.haji.calculator
 
 import android.annotation.SuppressLint
+import android.content.Intent
+import android.content.res.Configuration
 import android.os.Bundle
 import android.os.Handler
 import android.os.Looper
 import android.widget.Button
-import android.widget.EditText
 import android.widget.TextView
 import androidx.activity.enableEdgeToEdge
 import androidx.appcompat.app.AppCompatActivity
@@ -14,6 +15,8 @@ import androidx.core.view.WindowInsetsCompat
 import net.objecthunter.exp4j.ExpressionBuilder
 
 class MainActivity : AppCompatActivity() {
+    private lateinit var calculatingZone : TextView;
+
     @SuppressLint("MissingInflatedId")
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -41,7 +44,8 @@ class MainActivity : AppCompatActivity() {
         val deleteBtn = findViewById<Button>(R.id.deleteBtn);
         val equalBtn = findViewById<Button>(R.id.equalBtn);
 
-        val calculatingZone = findViewById<TextView>(R.id.calculateZone);
+        calculatingZone = findViewById<TextView>(R.id.calculatingZone)
+        calculatingZone.text = intent.getStringExtra("currentLandscapeCalculatingZone")
 
         deleteAllBtn.setOnClickListener {
             calculatingZone.setText("")
@@ -143,4 +147,17 @@ class MainActivity : AppCompatActivity() {
             insets
         }
     }
+
+    override fun onConfigurationChanged(newConfig: Configuration) {
+        super.onConfigurationChanged(newConfig)
+
+        if (newConfig.orientation == Configuration.ORIENTATION_LANDSCAPE) {
+            // Start landscape activity
+            val intent = Intent(this, LandscapeCalculatorMode::class.java)
+            intent.putExtra("currentPortraitCalculatingZone", calculatingZone.text.toString())
+            startActivity(intent)
+        }
+    }
+
+
 }

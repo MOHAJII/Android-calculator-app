@@ -22,7 +22,7 @@
         app:layout_constraintTop_toTopOf="parent">
 
         <TextView
-            android:id="@+id/calculateZone"
+            android:id="@+id/calculatingZone"
             android:layout_width="match_parent"
             android:layout_height="162dp"
             android:fontFamily="@font/poppins_semibold"
