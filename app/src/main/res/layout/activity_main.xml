@@ -21,17 +21,27 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent">
 
-        <TextView
+        <Spinner
+            android:id="@+id/historySpinner"
+            android:layout_width="match_parent"
+            android:layout_height="55dp"
+            android:layout_marginStart="3dp"
+            android:paddingStart="5dp"
+            android:prompt="@string/history" />
+
+        <EditText
             android:id="@+id/calculatingZone"
             android:layout_width="match_parent"
-            android:layout_height="162dp"
+            android:layout_height="151dp"
+            android:ems="10"
             android:fontFamily="@font/poppins_semibold"
             android:gravity="bottom"
-            android:hint="(1+2)/5"
-            android:padding="10dp"
+            android:hint="@string/hint"
+            android:inputType="text"
+            android:paddingRight="10dp"
             android:textAlignment="viewEnd"
-            android:textSize="48sp"
-            tools:ignore="RtlCompat" />
+            android:textSize="34sp"
+            android:background="@null"/>
 
         <TableLayout
             android:layout_width="match_parent"

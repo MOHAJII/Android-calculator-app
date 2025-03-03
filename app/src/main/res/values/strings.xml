@@ -33,4 +33,5 @@
     <string name="logarithmic">LOG</string>
     <string name="logarithmic_nip">LN</string>
     <string name="hint">(1+2)*4</string>
+    <string name="history">history</string>
 </resources>
